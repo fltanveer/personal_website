@@ -3,7 +3,7 @@ layout: "../../layouts/BlogPost.astro"
 title: "Flowcite Redesign or A Progressive Case Study"
 description: "Flowcite is a SASS application built specially for research all over the world"
 pubDate: "Jan 21 2022"
-heroImage: "/flowcite.jpg"
+heroImage: "/flowcite-cover.png"
 category: "UX"
 ---
 
