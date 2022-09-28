@@ -1,63 +1,119 @@
-# Astro Starter Kit: Blog
+# Markdown Cheat Sheet
+
+Thanks for visiting [The Markdown Guide](https://www.markdownguide.org)!
+
+This Markdown cheat sheet provides a quick overview of all the Markdown syntax elements. It can’t cover every edge case, so if you need more information about any of these elements, refer to the reference guides for [basic syntax](https://www.markdownguide.org/basic-syntax) and [extended syntax](https://www.markdownguide.org/extended-syntax).
+
+## Basic Syntax
+
+These are the elements outlined in John Gruber’s original design document. All Markdown applications support these elements.
+
+### Heading
+
+# H1
+## H2
+### H3
+
+### Bold
+
+**bold text**
+
+### Italic
+
+*italicized text*
+
+### Blockquote
+
+> blockquote
+
+### Ordered List
+
+1. First item
+2. Second item
+3. Third item
+
+### Unordered List
+
+- First item
+- Second item
+- Third item
+
+### Code
+
+`code`
+
+### Horizontal Rule
+
+---
+
+### Link
+
+[Markdown Guide](https://www.markdownguide.org)
+
+### Image
+
+![alt text](https://www.markdownguide.org/assets/images/tux.png)
+
+## Extended Syntax
+
+These elements extend the basic syntax by adding additional features. Not all Markdown applications support these elements.
+
+### Table
+
+| Syntax | Description |
+| ----------- | ----------- |
+| Header | Title |
+| Paragraph | Text |
+
+### Fenced Code Block
 
 ```
-npm init astro -- --template blog
+{
+  "firstName": "John",
+  "lastName": "Smith",
+  "age": 25
+}
 ```
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/blog)
+### Footnote
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+Here's a sentence with a footnote. [^1]
 
-![blog](https://user-images.githubusercontent.com/4677417/186189140-4ef17aac-c3c9-4918-a8c2-ce86ba1bb394.png)
+[^1]: This is the footnote.
 
-Features:
+### Heading ID
 
-- ✅ Minimal styling (make it your own!)
-- ✅ 100/100 Lighthouse performance
-- ✅ SEO-friendly with canonical URLs and OpenGraph data
-- ✅ Sitemap support
-- ✅ RSS Feed support
-- ✅ Markdown & MDX support
+### My Great Heading {#custom-id}
 
-## 🚀 Project Structure
+### Definition List
 
-Inside of your Astro project, you'll see the following folders and files:
+term
+: definition
 
-```
-├── public/
-├── src/
-│   ├── components/
-│   ├── layouts/
-│   └── pages/
-├── astro.config.mjs
-├── README.md
-├── package.json
-└── tsconfig.json
-```
+### Strikethrough
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+~~The world is flat.~~
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+### Task List
 
-Any static assets, like images, can be placed in the `public/` directory.
+- [x] Write the press release
+- [ ] Update the website
+- [ ] Contact the media
 
-## 🧞 Commands
+### Emoji
 
-All commands are run from the root of the project, from a terminal:
+That is so funny! :joy:
 
-| Command                | Action                                           |
-| :--------------------- | :----------------------------------------------- |
-| `npm install`          | Installs dependencies                            |
-| `npm run dev`          | Starts local dev server at `localhost:3000`      |
-| `npm run build`        | Build your production site to `./dist/`          |
-| `npm run preview`      | Preview your build locally, before deploying     |
-| `npm run astro ...`    | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro --help` | Get help using the Astro CLI                     |
+(See also [Copying and Pasting Emoji](https://www.markdownguide.org/extended-syntax/#copying-and-pasting-emoji))
 
-## 👀 Want to learn more?
+### Highlight
 
-Check out [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+I need to highlight these ==very important words==.
 
-## Credit
+### Subscript
 
-This theme is based off of the lovely [Bear Blog](https://github.com/HermanMartinus/bearblog/).
+H~2~O
+
+### Superscript
+
+X^2^
