@@ -16,11 +16,11 @@ export interface Props {
 const href = Astro.url.href;
 
 const {
-  content: { title, description, pubDate, updatedDate, heroImage },
+  content: { title, description, pubDate, updatedDate, heroImage = '/about-me.jpg' },
 } = Astro.props;
 ---
 
-<BaseLayout content={{ title, description }}>
+<BaseLayout content={{ title, description, heroImage }}>
   <div class="blog__wrapper">
     <aside
       class="fixed left-0 h-16 bg-white md:bg-transparent w-full bottom-0 flex p-2 justify-around items-center shadow md:top-8 md:left-0 md:h-72 md:flex-col md:w-16 md:sticky md:mt-16 z-10 md:shadow-transparent"
