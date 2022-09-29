@@ -3,19 +3,45 @@ import HeaderLink from "./HeaderLink.astro";
 // import { SITE_TITLE } from "../config";
 ---
 
-<header class="max-w-blog mx-auto px-3 mt-8" id="top">
-  <nav class="flex justify-between py-2.5 text-black items-center">
-    <HeaderLink href="/" class="text-2xl font-bold">
-      <!-- {SITE_TITLE} -->
-      AR Tanveer
-    </HeaderLink>
-    <div class="flex gap-6">
-      <HeaderLink class="text-black font-medium" href="/case-studies"
-        >Case Studies</HeaderLink
-      >
-      <HeaderLink class="text-black font-medium" href="/about"
-        >My Story</HeaderLink
-      >
+<header class="" id="top">
+  <nav
+    class="text-black items-center fixed top-0 left-0 w-screen bg-transparent z-10 backdrop-blur-sm"
+    id="fixed-nav"
+  >
+    <div
+      class="max-w-blog mx-auto mt-4 w-full flex justify-between pb-3 px-1 transition-all"
+    >
+      <HeaderLink href="/" class="text-2xl font-bold hover:no-underline">
+        <!-- {SITE_TITLE} -->
+        AR Tanveer
+      </HeaderLink>
+      <div class="flex gap-6">
+        <HeaderLink class="text-black" href="/showcase"
+          >Visual Showcase</HeaderLink
+        >
+        <HeaderLink class="text-black" href="/case-studies"
+          >Case Studies</HeaderLink
+        >
+        <HeaderLink class="text-black" href="/about">My Story</HeaderLink>
+      </div>
     </div>
   </nav>
 </header>
+
+<script>
+  document.addEventListener("scroll", () => {
+    const element = document.getElementById("fixed-nav");
+    const scroll =
+      document.documentElement.scrollTop || document.body.scrollTop;
+
+    if (element) {
+      if (scroll > 75) {
+        element.classList.remove("bg-transparent");
+        element.classList.add("bg-white/70");
+      } else {
+        element.classList.remove("bg-white/70");
+        element.classList.add("bg-transparent");
+      }
+    }
+  });
+</script>

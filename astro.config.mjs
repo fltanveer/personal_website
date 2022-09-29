@@ -8,5 +8,14 @@ import preact from "@astrojs/preact";
 // https://astro.build/config
 export default defineConfig({
   site: "https://artanveer.design",
-  integrations: [mdx(), sitemap(), tailwind(), preact()],
+  integrations: [
+    mdx(),
+    sitemap(),
+    tailwind({
+      config: {
+        applyBaseStyles: false,
+      },
+    }),
+    preact(),
+  ],
 });
