@@ -4,6 +4,8 @@ title: "Olay Website Revamp For Better Conversion"
 description: "Some description"
 heroImage: "/showcase-oclay/cover.jpg"
 category: "Other"
+nextLink: 'showcase-4'
+previousLink: 'showcase-3'
 ---
 
 ##
