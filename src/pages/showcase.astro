@@ -7,7 +7,7 @@ const showcases = await Astro.glob<MarkdownInstance>("./showcase/*.{md,mdx}");
 ---
 
 <BaseLayout content={{ title: SITE_TITLE, description: SITE_DESCRIPTION }}>
-  <div class="grid grid-cols-1 md:grid-cols-2 mt-28 gap-2 gap-y-8">
+  <div class="grid grid-cols-1 md:grid-cols-2 mt-28 gap-4 gap-y-8">
     {
       showcases.map((showcase) => (
         <a href={showcase.url} class="group overflow-hidden">
