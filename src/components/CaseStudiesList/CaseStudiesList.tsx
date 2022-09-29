@@ -41,7 +41,7 @@ const CaseStudiesList = ({ data, uniqueCategories }: Props) => {
           );
         })}
       </section>
-      <div class="mt-5 border-t border-[#EBEBEB] pt-8 grid gap-10">
+      <div class="mt-5 border-t border-[#2e2e2e] pt-8 grid gap-10">
         {frontMatters != null &&
           frontMatters.map((post) => (
             <article
