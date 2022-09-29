@@ -5,6 +5,8 @@ description: "All about satisfying elder stakeholders."
 pubDate: "Jan 26 2022"
 heroImage: "/gulshan/cover.jpg"
 category: "Design Process"
+nextLink: 'showcase-2'
+previousLink: 'showcase-1'
 ---
 
 ##

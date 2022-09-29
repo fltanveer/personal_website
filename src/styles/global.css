@@ -1,20 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 body {
   font-family: "Noto Sans", sans-serif;
 }
 
-blockquote{
+blockquote {
   background: #fbf3b9;
   border-left-color: #000;
   padding: 1px 10px;
 }
-.prose :where(blockquote):not(:where([class~="not-prose"] *)){
+.prose :where(blockquote):not(:where([class~="not-prose"] *)) {
   border-left-color: #2a2a2a;
 }
 
-h1,h2,h3,h4,h5,h6{
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-weight: 800 !important;
 }
 
-nav a div{
+nav a div {
   font-weight: 800 !important;
+}
+
+@layer base {
+  a {
+    @apply font-semibold transition hover:underline hover:underline-offset-2 hover:text-black;
+  }
 }
