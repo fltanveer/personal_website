@@ -9,8 +9,9 @@ previousLink: 'showcase-7'
 
 ##
 ---
-### Landing page for design process
 This landing page was created in a very simple and fun way. It explains how the design process is maintained for the company.
+### Landing page for design process
+
 ![Navigation Font](/showcase-design-process/screen1.jpg)
 ---
 
