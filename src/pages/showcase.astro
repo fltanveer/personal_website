@@ -1,0 +1,26 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { SITE_TITLE, SITE_DESCRIPTION } from "../config";
+import type { MarkdownInstance } from "../types/frontMatter";
+
+const showcases = await Astro.glob<MarkdownInstance>("./showcase/*.{md,mdx}");
+---
+
+<BaseLayout content={{ title: SITE_TITLE, description: SITE_DESCRIPTION }}>
+  <div class="grid grid-cols-1 md:grid-cols-2 mt-28 gap-2">
+    {
+      showcases.map((showcase) => (
+        <a href={showcase.url} class="group overflow-hidden">
+          <figure class="overflow-hidden" aria-labelledby="caption-text">
+            <img
+              src={showcase.frontmatter.heroImage}
+              alt={showcase.frontmatter.title}
+              class="group-hover:scale-110 duration-500 object-cover transition-all"
+            />
+          </figure>
+          <div id="caption-text"> {showcase.frontmatter.title}</div>
+        </a>
+      ))
+    }
+  </div>
+</BaseLayout>
