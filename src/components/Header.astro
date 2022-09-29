@@ -11,20 +11,18 @@ import HeaderLink from "./HeaderLink.astro";
     <div
       class="max-w-blog mx-auto mt-4 w-full flex justify-between pb-3 px-1 transition-all"
     >
-      <HeaderLink href="/" class="text-2xl font-bold">
+      <HeaderLink href="/" class="text-2xl font-bold hover:no-underline">
         <!-- {SITE_TITLE} -->
         AR Tanveer
       </HeaderLink>
       <div class="flex gap-6">
-        <HeaderLink class="text-black font-medium" href="/showcase"
+        <HeaderLink class="text-black" href="/showcase"
           >Visual Showcase</HeaderLink
         >
-        <HeaderLink class="text-black font-medium" href="/case-studies"
+        <HeaderLink class="text-black" href="/case-studies"
           >Case Studies</HeaderLink
         >
-        <HeaderLink class="text-black font-medium" href="/about"
-          >My Story</HeaderLink
-        >
+        <HeaderLink class="text-black" href="/about">My Story</HeaderLink>
       </div>
     </div>
   </nav>
