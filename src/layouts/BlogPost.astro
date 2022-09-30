@@ -1,5 +1,8 @@
 ---
 import "@fontsource/roboto-flex";
+import HeaderAuxLinks from "../components/HeaderAuxLinks.astro";
+import SocialLinks from "../components/SocialLinks.astro";
+
 import BaseLayout from "./BaseLayout.astro";
 
 export interface Props {
@@ -15,7 +18,7 @@ export interface Props {
   href: string;
 }
 
-const href = Astro.url.href;
+const includeShowcase = !Astro.url.toString().includes("showcase");
 
 const {
   content: {
@@ -32,114 +35,19 @@ const {
 
 <BaseLayout content={{ title, description, heroImage }}>
   <div class="blog__wrapper">
-    <aside
-      class="fixed left-0 h-16 bg-white md:bg-transparent w-full bottom-0 flex p-2 justify-around items-center shadow md:top-8 md:left-0 md:h-72 md:flex-col md:w-16 md:sticky md:mt-16 z-10 md:shadow-transparent"
+    {
+      includeShowcase ? (
+        <aside class="hidden left-0 h-16 bg-white md:bg-transparent w-full bottom-0 lg:flex p-2 justify-around items-center shadow md:top-12 md:left-0 md:h-72 md:flex-col md:w-16 md:sticky md:mt-16 z-10 md:shadow-transparent">
+          <SocialLinks title={title} />
+        </aside>
+      ) : null
+    }
+    <div
+      class="fixed flex left-0 h-16 lg:hidden w-full bottom-0 p-2 justify-around items-center bg-white/70 backdrop-blur-sm z-10"
     >
-      <a
-        href={`https://www.facebook.com/sharer/sharer.php?u=${href}`}
-        class="w-12 h-12 rounded-full inline-flex justify-center items-center"
-        rel="noopener noreferrer"
-        target="_blank"
-      >
-        <span class="sr-only">Share on facebook</span>
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          class="feather feather-facebook"
-          aria-hidden="true"
-          ><path
-            d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"
-          ></path>
-        </svg>
-      </a>
-      <a
-        href={`https://twitter.com/intent/tweet?url=${href}&text=${title}`}
-        class="w-12 h-12 rounded-full inline-flex justify-center items-center"
-        rel="noopener noreferrer"
-        target="_blank"
-      >
-        <span class="sr-only">Share on twitter</span>
-
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          class="feather feather-twitter"
-          aria-hidden="true"
-          ><path
-            d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"
-          ></path>
-        </svg>
-      </a>
-      <a
-        href={`https://www.linkedin.com/sharing/share-offsite?url=${href}&title=${title}`}
-        class="w-12 h-12 rounded-full inline-flex justify-center items-center"
-        rel="noopener noreferrer"
-        target="_blank"
-      >
-        <span class="sr-only">Share on linkedin</span>
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          class="feather feather-linkedin"
-          aria-hidden="true"
-          ><path
-            d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"
-          ></path><rect x="2" y="9" width="4" height="12"></rect><circle
-            cx="4"
-            cy="4"
-            r="2"></circle>
-        </svg>
-      </a>
-      <button
-        class="w-12 h-12 rounded-full inline-flex justify-center items-center relative"
-        id="copy"
-      >
-        <span class="sr-only">Copy link</span>
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          class="feather feather-link"
-          ><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"
-          ></path><path
-            d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"
-          ></path>
-        </svg>
-      </button>
-      <span
-        class="absolute bottom-0 bg-white text-slate-800 font-medium hide"
-        id="text"
-        class="text">Copied</span
-      >
-    </aside>
-    <main class="max-w-[calc(65ch+128px)]">
+      <HeaderAuxLinks />
+    </div>
+    <main class="max-w-[calc(65ch+128px)] mx-auto">
       <article
         class="prose lg:prose-lg xl:prose-lg mt-20 relative mx-auto w-full xl:prose-h1:leading-[1.1] prose-img:mx-auto"
       >
@@ -155,99 +63,110 @@ const {
         }
         <slot />
       </article>
+
       <div
-        class="flex justify-between w-full mt-12 items-center py-2 font-bold"
+        class="flex lg:hidden border-t border-b border-[#f5df36] mt-8 w-full justify-center gap-2 relative"
+        id="second-copy"
       >
-        <a
-          href={`/showcase/${previousLink}`}
-          class="inline-flex gap-2 items-center">👈Previous Link</a
-        >
-        <a href={`/showcase/${nextLink}`} class="inline-flex gap-2 items-center"
-          >Next Link👉</a
-        >
+        <SocialLinks title={title} id="boom" />
       </div>
+
+      {
+        Boolean(previousLink) || Boolean(nextLink) ? (
+          <div class="flex justify-between w-full mt-12 items-center py-2 font-bold">
+            {Boolean(previousLink) ? (
+              <a
+                href={`/showcase/${previousLink}`}
+                class="inline-flex gap-2 items-center text-lg"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <polyline points="15 18 9 12 15 6" />
+                </svg>
+                Previous Link
+              </a>
+            ) : (
+              <span />
+            )}
+            {Boolean(nextLink) ? (
+              <a
+                href={`/showcase/${nextLink}`}
+                class="inline-flex gap-2 items-center text-lg"
+              >
+                Next Link
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                  class="transform rotate-180"
+                >
+                  <polyline points="15 18 9 12 15 6" />
+                </svg>
+              </a>
+            ) : null}
+          </div>
+        ) : null
+      }
     </main>
   </div>
-
-  <style>
-    @media (min-width: 768px) {
-      .blog__wrapper {
-        display: grid;
-        grid-template-columns: auto 1fr;
-      }
-    }
-
-    @keyframes bounce {
-      from,
-      20%,
-      40%,
-      60%,
-      80%,
-      to {
-        animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
-      }
-
-      0% {
-        opacity: 0;
-        transform: scale3d(0.3, 0.3, 0.3);
-      }
-
-      20% {
-        transform: scale3d(1.1, 1.1, 1.1);
-      }
-
-      40% {
-        transform: scale3d(0.9, 0.9, 0.9);
-      }
-
-      60% {
-        opacity: 1;
-        transform: scale3d(1.03, 1.03, 1.03);
-      }
-
-      80% {
-        transform: scale3d(0.97, 0.97, 0.97);
-      }
-
-      to {
-        opacity: 1;
-        transform: scale3d(1, 1, 1);
-      }
-    }
-
-    .bounce {
-      animation-name: bounce;
-      transform-origin: center bottom;
-      animation-duration: 0.75s;
-      animation-fill-mode: both;
-    }
-
-    .hide {
-      display: none;
-    }
-
-    .show {
-      display: block;
-    }
-  </style>
-  <script>
-    import writeText from "copy-to-clipboard";
-    const element = document.getElementById("copy");
-    const text = document.getElementById("text");
-    if (element) {
-      element.addEventListener("click", () => {
-        writeText(window.location.href);
-        if (text) {
-          text.classList.remove("hide");
-          text.classList.add("show");
-          text.classList.add("bounce");
-          setTimeout(() => {
-            text.classList.add("hide");
-            text.classList.remove("show");
-            text.classList.remove("bounce");
-          }, 1500);
-        }
-      });
-    }
-  </script>
 </BaseLayout>
+
+<style>
+  @media (min-width: 1024px) {
+    .blog__wrapper {
+      display: grid;
+      grid-template-columns: auto 1fr;
+    }
+  }
+</style>
+
+<script>
+  import writeText from "copy-to-clipboard";
+  const element = document.getElementById("second-copy");
+  if (element) {
+    const text = document.getElementById("text");
+    const text2 = document.getElementById("boom");
+    element.addEventListener("click", () => {
+      writeText(window.location.href);
+      if (text) {
+        text.classList.remove("hidden");
+        text.classList.add("block");
+        text.classList.add("bounce");
+
+        setTimeout(() => {
+          text.classList.add("hidden");
+          text.classList.remove("block");
+          text.classList.remove("bounce");
+        }, 1500);
+      }
+
+      if (text2) {
+        text2.classList.remove("hidden");
+        text2.classList.add("block");
+        text2.classList.add("bounce");
+        setTimeout(() => {
+          text2.classList.add("hidden");
+          text2.classList.remove("block");
+          text2.classList.remove("bounce");
+        }, 1500);
+      }
+    });
+  }
+</script>
