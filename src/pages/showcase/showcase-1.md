@@ -4,7 +4,6 @@ title: "Flowcite : All in one academic solution"
 description: "All about satisfying elder stakeholders."
 heroImage: "/showcase-flowcite/cover.jpg"
 nextLink: 'showcase-2'
-previousLink: 'showcase-1'
 ---
 
 ##

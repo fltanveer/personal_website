@@ -1,4 +1,5 @@
 ---
+import HeaderAuxLinks from "./HeaderAuxLinks.astro";
 import HeaderLink from "./HeaderLink.astro";
 // import { SITE_TITLE } from "../config";
 ---
@@ -9,21 +10,13 @@ import HeaderLink from "./HeaderLink.astro";
     id="fixed-nav"
   >
     <div
-      class="max-w-blog mx-auto mt-4 w-full flex justify-between pb-3 px-1 transition-all"
+      class="max-w-blog mx-auto mt-4 w-full flex lg:justify-between pb-3 px-1 transition-all justify-center"
     >
       <HeaderLink href="/" class="text-2xl font-bold hover:no-underline">
         <!-- {SITE_TITLE} -->
         AR Tanveer
       </HeaderLink>
-      <div class="flex gap-6">
-        <HeaderLink class="text-black" href="/showcase"
-          >Visual Showcase</HeaderLink
-        >
-        <HeaderLink class="text-black" href="/case-studies"
-          >Case Studies</HeaderLink
-        >
-        <HeaderLink class="text-black" href="/about">My Story</HeaderLink>
-      </div>
+      <HeaderAuxLinks class="hidden lg:flex" />
     </div>
   </nav>
 </header>
