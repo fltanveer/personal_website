@@ -1,11 +1,11 @@
 ---
 import groupby from "lodash-es/groupBy";
-import CaseStudiesList from "../components/CaseStudiesList";
+import BlogsList from "../components/BlogsList";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import { SITE_TITLE, SITE_DESCRIPTION } from "../config";
 import type { MarkdownInstance, Frontmatter } from "../types/frontMatter";
 
-const posts = await Astro.glob<MarkdownInstance>("./case-studies/*.{md,mdx}");
+const posts = await Astro.glob<MarkdownInstance>("./blogs/*.{md,mdx}");
 const categories = posts.map((post) => post.frontmatter.category);
 const uniqueCategories = [...new Set(categories)];
 const sortFunction = (a: MarkdownInstance, b: MarkdownInstance) =>
@@ -35,10 +35,6 @@ const data: Record<string, MarkdownInstance[]> = {
 
 <BaseLayout content={{ title: SITE_TITLE, description: SITE_DESCRIPTION }}>
   <section class="mt-20">
-    <CaseStudiesList
-      uniqueCategories={uniqueCategories}
-      data={data}
-      client:idle
-    />
+    <BlogsList uniqueCategories={uniqueCategories} data={data} client:idle />
   </section>
 </BaseLayout>

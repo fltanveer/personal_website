@@ -1,5 +1,5 @@
 ---
-layout: "../../layouts/BlogPost.astro"
+layout: "../../layouts/ShowCase.astro"
 title: "Wearit: Multi Vendor Ecommerce"
 description: "All about satisfying elder stakeholders."
 heroImage: "/showcase-wearit-mobile/cover.jpg"

@@ -5,7 +5,7 @@ type Props = {
   data: Record<string, MarkdownInstance[]>;
 };
 
-const CaseStudiesList = ({ data, uniqueCategories }: Props) => {
+const BlogsList = ({ data, uniqueCategories }: Props) => {
   const [filter, setFilter] = useState<string>("default");
 
   const frontMatters = useMemo(() => {
@@ -76,4 +76,4 @@ const CaseStudiesList = ({ data, uniqueCategories }: Props) => {
   );
 };
 
-export default CaseStudiesList;
+export default BlogsList;

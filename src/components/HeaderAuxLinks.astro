@@ -6,8 +6,11 @@ export interface Props {
 const { class: className } = Astro.props;
 ---
 
-<div class:list={[className, "flex gap-6"]}>
+<div
+  id="aux-links"
+  class:list={[className, "flex gap-6 flex-wrap justify-around"]}
+>
   <HeaderLink class="text-black" href="/showcase">Visual Showcase</HeaderLink>
-  <HeaderLink class="text-black" href="/case-studies">Case Studies</HeaderLink>
+  <HeaderLink class="text-black" href="/blogs">Blogs</HeaderLink>
   <HeaderLink class="text-black" href="/about">My Story</HeaderLink>
 </div>
