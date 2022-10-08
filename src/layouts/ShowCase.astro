@@ -32,7 +32,7 @@ const {
 ---
 
 <BaseLayout content={{ title, description, heroImage }}>
-  <div class="blog__wrapper">
+  <div class="showcase__wrapper">
     {
       includeShowcase ? (
         <aside class="hidden left-0 h-16 bg-white md:bg-transparent w-full bottom-0 lg:flex p-2 justify-around items-center shadow md:top-12 md:left-0 md:h-72 md:flex-col md:w-16 md:sticky md:mt-16 z-10 md:shadow-transparent">
@@ -124,9 +124,8 @@ const {
 
 <style>
   @media (min-width: 1024px) {
-    .blog__wrapper {
+    .showcase__wrapper {
       display: grid;
-      grid-template-columns: auto 1fr;
     }
   }
 </style>

@@ -1,5 +1,5 @@
 ---
-layout: "../../layouts/BlogPost.astro"
+layout: "../../layouts/ShowCase.astro"
 title: "Flowcite : All in one academic solution"
 description: "All about satisfying elder stakeholders."
 heroImage: "/showcase-flowcite/cover.jpg"

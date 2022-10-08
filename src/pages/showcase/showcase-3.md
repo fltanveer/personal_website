@@ -1,5 +1,5 @@
 ---
-layout: "../../layouts/BlogPost.astro"
+layout: "../../layouts/ShowCase.astro"
 title: "Olay Website Revamp For Better Conversion"
 description: "Some description"
 heroImage: "/showcase-oclay/cover.jpg"
