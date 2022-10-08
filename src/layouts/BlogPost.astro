@@ -1,4 +1,6 @@
 ---
+import "@fontsource/roboto-flex";
+import HeaderAuxLinks from "../components/HeaderAuxLinks.astro";
 import SocialLinks from "../components/SocialLinks.astro";
 
 import BaseLayout from "./BaseLayout.astro";
@@ -40,7 +42,11 @@ const {
         </aside>
       ) : null
     }
-
+    <div
+      class="fixed flex left-0 h-16 lg:hidden w-full bottom-0 p-2 justify-around items-center bg-white/70 backdrop-blur-sm z-10"
+    >
+      <HeaderAuxLinks />
+    </div>
     <main class="max-w-[calc(65ch+128px)] mx-auto">
       <article
         class="prose lg:prose-lg xl:prose-lg mt-20 relative mx-auto w-full xl:prose-h1:leading-[1.1] prose-img:mx-auto"

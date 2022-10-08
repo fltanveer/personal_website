@@ -75,6 +75,12 @@ hr {
   animation-duration: 0.75s;
   animation-fill-mode: both;
 }
+.showcase-container{
+  width: 100%;
+}
+.showcase-container .prose{
+  max-width: 100ch !important;
+}
 
 @layer base {
   a {
