@@ -30,6 +30,19 @@ nav a div {
 hr {
   border-color: #f5df36 !important;
 }
+ul {
+  list-style: none !important;
+}
+
+ul li::before {
+  content: "\2022";
+  color: #000;
+  font-weight: bold;
+  display: inline-block; 
+  width: 1.5em;
+  margin-left: -1em;
+  font-size: 18px;
+}
 
 @keyframes bounce {
   from,
