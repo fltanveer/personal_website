@@ -6,17 +6,20 @@ import HeaderLink from "./HeaderLink.astro";
 
 <header class="" id="top">
   <nav
-    class="text-black items-center fixed top-0 left-0 w-screen bg-transparent z-10 backdrop-blur-sm"
+    class="items-center fixed top-0 left-0 w-screen bg-black/80 z-10 backdrop-blur-sm text-white"
     id="fixed-nav"
   >
     <div
       class="max-w-blog mx-auto mt-4 w-full flex lg:justify-between pb-3 px-1 transition-all justify-center"
     >
-      <HeaderLink href="/" class="text-2xl font-bold hover:no-underline">
+      <HeaderLink
+        href="/"
+        class="text-2xl font-bold hover:no-underline text-white hover:text-gray-200"
+      >
         <!-- {SITE_TITLE} -->
         AR Tanveer
       </HeaderLink>
-      <HeaderAuxLinks class="hidden lg:flex" />
+      <HeaderAuxLinks class="hidden lg:flex text-white" />
     </div>
   </nav>
 </header>

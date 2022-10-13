@@ -27,8 +27,6 @@ const {
     pubDate,
     updatedDate,
     heroImage = "/about-me.jpg",
-    nextLink,
-    previousLink,
   },
 } = Astro.props;
 ---
@@ -43,7 +41,7 @@ const {
       ) : null
     }
     <div
-      class="fixed flex left-0 h-16 lg:hidden w-full bottom-0 p-2 justify-around items-center bg-black/80 backdrop-blur-sm z-1"
+      class="fixed flex left-0 h-16 lg:hidden w-full bottom-0 p-2 justify-around items-center bg-black/80 backdrop-blur-sm z-10"
     >
       <HeaderAuxLinks />
     </div>
@@ -70,60 +68,6 @@ const {
       >
         <SocialLinks title={title} id="boom" />
       </div>
-
-      {
-        Boolean(previousLink) || Boolean(nextLink) ? (
-          <div class="flex justify-between w-full mt-12 items-center py-2 font-bold">
-            {Boolean(previousLink) ? (
-              <a
-                href={`/showcase/${previousLink}`}
-                class="inline-flex gap-2 items-center text-lg"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  aria-hidden="true"
-                >
-                  <polyline points="15 18 9 12 15 6" />
-                </svg>
-                Previous Link
-              </a>
-            ) : (
-              <span />
-            )}
-            {Boolean(nextLink) ? (
-              <a
-                href={`/showcase/${nextLink}`}
-                class="inline-flex gap-2 items-center text-lg"
-              >
-                Next Link
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  aria-hidden="true"
-                  class="transform rotate-180"
-                >
-                  <polyline points="15 18 9 12 15 6" />
-                </svg>
-              </a>
-            ) : null}
-          </div>
-        ) : null
-      }
     </main>
   </div>
 </BaseLayout>
