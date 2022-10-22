@@ -3,16 +3,20 @@
 @tailwind utilities;
 
 body {
-  font-family: "Noto Sans", sans-serif, "Open Sans", "Helvetica Neue";
+  font-family: "Manrope", sans-serif, "Open Sans", "Helvetica Neue";
 }
 
 blockquote {
-  background: #fbf3b9;
-  border-left-color: #000;
+  background: #ffffc5;
+  border-left-color: #f3f34e !important;
   padding: 1px 10px;
 }
 .prose :where(blockquote):not(:where([class~="not-prose"] *)) {
   border-left-color: #2a2a2a;
+}
+p{
+  font-weight: 500;
+  color: #2e2e2e;
 }
 
 h1,
@@ -22,6 +26,7 @@ h4,
 h5,
 h6 {
   font-weight: 800 !important;
+  color: #222 !important;
 }
 
 nav a div {
@@ -32,6 +37,10 @@ hr {
 }
 ul {
   list-style: none !important;
+}
+ul li{
+  font-weight: 600;
+  color: #2e2e2e;
 }
 
 ul li::before {

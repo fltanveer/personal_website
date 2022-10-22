@@ -17,6 +17,7 @@
     "@astrojs/rss": "^1.0.0",
     "@astrojs/sitemap": "^1.0.0",
     "@astrojs/tailwind": "^1.0.0",
+    "@fontsource/manrope": "^4.5.12",
     "@fontsource/noto-sans": "^4.5.11",
     "@fontsource/roboto": "^4.5.8",
     "@fontsource/roboto-flex": "^4.5.2",

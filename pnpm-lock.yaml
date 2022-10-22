@@ -6,6 +6,7 @@ specifiers:
   '@astrojs/rss': ^1.0.0
   '@astrojs/sitemap': ^1.0.0
   '@astrojs/tailwind': ^1.0.0
+  '@fontsource/manrope': ^4.5.12
   '@fontsource/noto-sans': ^4.5.11
   '@fontsource/roboto': ^4.5.8
   '@fontsource/roboto-flex': ^4.5.2
@@ -34,6 +35,7 @@ dependencies:
   '@astrojs/rss': 1.0.0
   '@astrojs/sitemap': 1.0.0
   '@astrojs/tailwind': 1.0.0
+  '@fontsource/manrope': 4.5.12
   '@fontsource/noto-sans': 4.5.11
   '@fontsource/roboto': 4.5.8
   '@fontsource/roboto-flex': 4.5.2
@@ -511,6 +513,10 @@ packages:
     transitivePeerDependencies:
       - supports-color
     dev: true
+
+  /@fontsource/manrope/4.5.12:
+    resolution: {integrity: sha512-s2G9tvaG8+p4OcxbYH9KS7JpgC+Tz2q7GNJLdKQJ/L2DrQZs6e0ARDhcA3KTTU/sVIE6MRfNPXvds8DNoQgEZw==}
+    dev: false
 
   /@fontsource/noto-sans/4.5.11:
     resolution: {integrity: sha512-lBX7FCjIjSrQ+iMuXUuO+mbjbnUsJyZANg/04PgkeeAYe+cwnX81ibbgrAk1F56M6/btIrWQoDjxsK6Sz8KoVQ==}
