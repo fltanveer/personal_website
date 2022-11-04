@@ -10,7 +10,23 @@ const { class: className } = Astro.props;
   id="aux-links"
   class:list={[className, "flex gap-6 flex-wrap justify-around"]}
 >
-  <HeaderLink class="text-black" href="/showcase">Visual Showcase</HeaderLink>
-  <HeaderLink class="text-black" href="/blogs">Blogs</HeaderLink>
-  <HeaderLink class="text-black" href="/about">My Story</HeaderLink>
+  <div class="relative group">
+    <button type="button" class="text-gray-200 font-bold">Showcase</button>
+    <div
+      class="absolute hidden group-focus-within:flex -top-20 lg:top-10 w-[calc(100%+3rem)] bg-black backdrop-blur-sm py-2 px-2 rounded-sm flex-col gap-3 text-sm"
+    >
+      <HeaderLink class="text-gray-200 hover:text-gray-300" href="/case-studies"
+        >Case Studies</HeaderLink
+      >
+      <HeaderLink class="text-gray-200 hover:text-gray-300" href="/showcase"
+        >Casual Visuals</HeaderLink
+      >
+    </div>
+  </div>
+  <HeaderLink class="text-gray-200 hover:text-gray-300" href="/blogs"
+    >Blogs</HeaderLink
+  >
+  <HeaderLink class="text-gray-200 hover:text-gray-300" href="/about"
+    >My Story</HeaderLink
+  >
 </div>
