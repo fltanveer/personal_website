@@ -36,4 +36,4 @@ I asked to use photograph but as this is going public my female co-worker reques
 
 
 
-So they liked the idea and confirmed this layout. There were some other struggles I’ve been through but I don’t want to make this read a lengthy one. If you want to see the live website. The link is [here](https://www.gulshanclub.com/)</a>
+To be continued....
