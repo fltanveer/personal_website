@@ -34,6 +34,54 @@ I asked to use photograph but as this is going public my female co-worker reques
 ![Contrast comparison and color selection](/case-unet/persona1.png)
 ![Contrast comparison and color selection](/case-unet/persona2.png)
 
+#### From user interview and Empathy map now the problems came out bold. Here are some listed problems that I found out. Added some problems as well from my perspective
+
+---
+### Problem Statement
+
+- When the app launch it shows the Action menu insted of login.
+- Checking balance is easy but for multiple accounts it is so tiny dropdown.
+- The app is confusing and sometimes user feels overwhelmed.
+- Beneficiary management is not good. For repeating transfers to same account the benificiary management is not giving a very pleasent experience.
+- Mobile recharge and MFS Transfers are frequent need. It takes a good amount of time to perform these tasks.
+- Transaction History is hard to find and It is decentralized even after they are connected with the same account.
+- Old UI elements make users laggy while they perform task.
+
+
+#### Some old screens for better understanding - 
+![Contrast comparison and color selection](/case-unet/old-screen.png)
+---
+
+
+### User journey Map
+From the problem statement I tried to create a user journey which is far from complete but I had an overall idea-
+
+![Contrast comparison and color selection](/case-unet/journey-map.png)
+
+#### The problem statement is ready with the journey map but there is still something I needed to take care. While exploring the problem I found out some spieces that can really boost the the business as well. I mean this is not the best app in the market but some important changes on the app can count this at least as a competior. So visualize the problem and tried to align the needs and Business value in the same ground.
+
+---
+### Frame the problem
+
+![Contrast comparison and color selection](/case-unet/frame.png)
+
+---
+### Understand the business
+
+![Contrast comparison and color selection](/case-unet/understand.png)
+
+---
+### Understand the user
+
+![Contrast comparison and color selection](/case-unet/understand-user.png)
+
+---
+
+### Pen paper sketches
+
+As this is a banking app most of the screens contains form elements which is necessary for banking, transfer purpose. Changing those screens and making the fields rearrange may result to hamper the soul purpose of a banking app. I decided to only focus on dashboard as users will be redirected to any kind of banking affairs with this screen. 
+
+>NB: For banking app some banks provide username to respective email address some don’t. For security purpose Unique user Id from bank makes the app more secure in many ways.
 
 
 To be continued....
