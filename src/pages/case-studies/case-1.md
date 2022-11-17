@@ -7,9 +7,6 @@ heroImage: "/case-unet/cover.png"
 category: "Design Process"
 ---
 
-##
-
->It is a UI designer’s nightmare to have to demonstrate to stakeholders who have less knowledge. Colors and layout are usually hard to argue with. The more difficult it is for a UI designer to stand out if he/she lacks the solid knowledge of defending their choices.This is story of designing a homepage for a top tier club
 
 ### App Overview
 
