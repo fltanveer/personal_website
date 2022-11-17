@@ -6,7 +6,7 @@ heroImage: "/showcase-flowcite/cover.jpg"
 nextLink: 'showcase-2'
 ---
 
-##
+
 ---
 ### Library
 ![Navigation Font](/showcase-flowcite/screen1.jpg)
@@ -26,5 +26,3 @@ nextLink: 'showcase-2'
 ---
 ### People collaboration view
 ![Navigation Font](/showcase-flowcite/screen5.jpg)
-
-
