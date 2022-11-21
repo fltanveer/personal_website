@@ -74,7 +74,7 @@ const data: Record<string, MarkdownInstance[]> = {
 
   <section class="mt-14">
     <div class="inline-flex items-center justify-between gap-2 w-full">
-      <h2 class="uppercase font-bold text-black">Blogs</h2>
+      <h2 class="uppercase font-bold text-black">Case Studies</h2>
       <a
         href="/blogs"
         class="text-[#2e2e2e] underline underline-offset-3 font-bold px-2"
@@ -82,7 +82,12 @@ const data: Record<string, MarkdownInstance[]> = {
         View all</a
       >
     </div>
-    <BlogsList uniqueCategories={uniqueCategories} data={data} client:idle />
+    <BlogsList
+      showTags={false}
+      uniqueCategories={uniqueCategories}
+      data={data}
+      client:idle
+    />
   </section>
   <section class="bg-[#fdffc4] full__bleed py-16 mt-28 text-black">
     <div class="max-w-blog mx-auto px-3 lg:px-0">

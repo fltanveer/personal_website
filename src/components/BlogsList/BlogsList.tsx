@@ -3,9 +3,10 @@ import type { MarkdownInstance } from "../../types/frontMatter";
 type Props = {
   uniqueCategories: string[];
   data: Record<string, MarkdownInstance[]>;
+  showTags?: boolean;
 };
 
-const BlogsList = ({ data, uniqueCategories }: Props) => {
+const BlogsList = ({ data, uniqueCategories, showTags = true }: Props) => {
   const [filter, setFilter] = useState<string>("default");
 
   const frontMatters = useMemo(() => {
@@ -18,29 +19,31 @@ const BlogsList = ({ data, uniqueCategories }: Props) => {
   // 444
   return (
     <>
-      <section class="mt-6 flex gap-3 flex-wrap">
-        <button
-          class={`transition text-white text-sm leading-7  px-3 py-0 rounded-full ${
-            filter === "default" ? "bg-[#523857]" : "bg-[#807490]"
-          }`}
-          onClick={() => handleFilterChange("default")}
-        >
-          Recent
-        </button>
-        {uniqueCategories.map((category) => {
-          return (
-            <button
-              key={category}
-              class={`transition text-white text-sm leading-7  px-3 py-0 rounded-full ${
-                filter === category ? "bg-[#523857]" : "bg-[#807490]"
-              }`}
-              onClick={() => handleFilterChange(category)}
-            >
-              {category}
-            </button>
-          );
-        })}
-      </section>
+      {showTags ? (
+        <section class="mt-6 flex gap-3 flex-wrap">
+          <button
+            class={`transition text-white text-sm leading-7  px-3 py-0 rounded-full ${
+              filter === "default" ? "bg-[#523857]" : "bg-[#807490]"
+            }`}
+            onClick={() => handleFilterChange("default")}
+          >
+            Recent
+          </button>
+          {uniqueCategories.map((category) => {
+            return (
+              <button
+                key={category}
+                class={`transition text-white text-sm leading-7  px-3 py-0 rounded-full ${
+                  filter === category ? "bg-[#523857]" : "bg-[#807490]"
+                }`}
+                onClick={() => handleFilterChange(category)}
+              >
+                {category}
+              </button>
+            );
+          })}
+        </section>
+      ) : null}
       <div class="mt-5 border-t border-[#2e2e2e] pt-8 grid gap-10">
         {frontMatters != null &&
           frontMatters.map((post) => (
@@ -59,9 +62,11 @@ const BlogsList = ({ data, uniqueCategories }: Props) => {
                 </div>
                 <footer class="mt-4 text-[#2E2E2E] text-sm flex gap-3 items-center">
                   <span class="leading-9">{post.frontmatter.pubDate}</span>
-                  <span class="text-white text-sm leading-7 bg-[#807490] px-4 rounded-full">
-                    {post.frontmatter.category}
-                  </span>
+                  {showTags ? (
+                    <span class="text-white text-sm leading-7 bg-[#807490] px-4 rounded-full">
+                      {post.frontmatter.category}
+                    </span>
+                  ) : null}
                 </footer>
               </div>
               <img
