@@ -6,7 +6,7 @@ import BlogsList from "../components/BlogsList";
 
 import groupby from "lodash-es/groupBy";
 
-const posts = await Astro.glob<MarkdownInstance>("./blogs/*.{md,mdx}");
+const posts = await Astro.glob<MarkdownInstance>("./case-studies/*.{md,mdx}");
 
 const categories = posts.map((post) => post.frontmatter.category);
 const uniqueCategories = [...new Set(categories)];
