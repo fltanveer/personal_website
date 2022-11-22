@@ -48,7 +48,7 @@ const BlogsList = ({ data, uniqueCategories, showTags = true }: Props) => {
         {frontMatters != null &&
           frontMatters.map((post) => (
             <article
-              class="flex flex-col lg:flex-row justify-between"
+              class="flex flex-col lg:flex-row justify-between gap-4"
               key={post.url}
             >
               <div class="order-2 lg:order-1">
@@ -70,7 +70,7 @@ const BlogsList = ({ data, uniqueCategories, showTags = true }: Props) => {
                 </footer>
               </div>
               <img
-                class="lg:ml-[71px] w-full lg:w-52 h-40 object-cover order-1 lg:order-2 mb-4 lg:mb-0"
+                class="w-full lg:max-w-[20rem] h-40 object-cover order-1 lg:order-2 mb-4 lg:mb-0"
                 src={post.frontmatter.heroImage}
                 alt={post.frontmatter.title}
               />
